@@ -1,0 +1,29 @@
+name: Python - sintaxe e testes simulados
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  checks:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Instalar dependencias
+        run: python -m pip install -r requirements.txt
+      - name: Sintaxe
+        run: python -m compileall -q ipp_server.py zebra_formatter.py zebra_fast_engine.py print_pdf_zebra.py zebra_ipp_manager.py verificar_integracao.py Verificador tests
+      - name: Integracao local sem impressao
+        run: python verificar_integracao.py
+      - name: Testes de formatacao
+        run: python tests/test_formatting.py
+      - name: Testes do codificador e do worker
+        run: python tests/test_optimized.py
+      - name: Testes HTTP e formatos
+        run: python tests/test_http_extended.py
+      - name: Testes do verificador
+        run: python Verificador/test_verificador.py
