@@ -60,19 +60,19 @@ py -m venv .venv
 Sem interface, o servidor pode ser iniciado manualmente (substitua o IP pelo IPv4 do seu PC):
 
 ```powershell
-.\.venv\Scripts\python.exe .\ipp_server.py --ip 192.168.10.76 --port 631 --layout-mode smart --debug
+.\.venv\Scripts\python.exe .\ipp_server.py --ip 192.168.10.0 --port 631 --layout-mode smart --debug
 ```
 
 **Impressão real — somente depois de validar:**
 
 ```powershell
-.\.venv\Scripts\python.exe .\ipp_server.py --ip 192.168.10.76 --port 631 --layout-mode smart --print --spool-batch-labels 1
+.\.venv\Scripts\python.exe .\ipp_server.py --ip 192.168.10.0 --port 631 --layout-mode smart --print --spool-batch-labels 1
 ```
 
 Verificação de rede (não imprime):
 
 ```powershell
-.\.venv\Scripts\python.exe .\Verificador\verificador_zebra.py --ip 192.168.10.76 --port 631
+.\.venv\Scripts\python.exe .\Verificador\verificador_zebra.py --ip 192.168.10.0 --port 631
 ```
 
 Testar apenas o fluxo PDF -> prévia, sem rede ou impressão:
