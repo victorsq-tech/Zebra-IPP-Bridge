@@ -1,0 +1,4 @@
+Pillow>=10
+PyMuPDF>=1.24
+zeroconf>=0.130
+pywin32>=306; platform_system == "Windows"

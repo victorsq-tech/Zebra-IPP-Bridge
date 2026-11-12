@@ -1,0 +1,40 @@
+# Dependências e ambientes locais (não publicar bibliotecas instaladas)
+.venv/
+.build-venv/
+venv/
+.env
+.env.*
+!.env.example
+# Python e builds
+__pycache__/
+*.py[cod]
+*.pyd
+*.pyz
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+*.spec
+# Saídas reais: podem conter dados de etiquetas e clientes
+previews/
+previews_ipp/
+spool_ipp/
+relatorios/
+Verificador/relatorios/
+logs/
+*.log
+# Descartes/duplicatas e arquivos locais
+old/
+copias/
+Atualizacao/
+*.bak
+*_backup.py
+*.tmp
+*.swp
+Thumbs.db
+.DS_Store
+# Executáveis e arquivos compactados de distribuição
+*.exe
+*.zip
